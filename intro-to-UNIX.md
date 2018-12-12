@@ -223,11 +223,11 @@ cp -i <source-file> <target-file> [-i flag will ask approval]
 cp -i <source-file> <target-directory>
 cp -i <source-file> . [. is current directory] 
 ```
-Let's copy the `test.tsv"` file to 
+Let's copy the `sample-metadata.tsv` file into a new directory `back-up` and list the output to confirm the copy:
 ```
 $ mkdir back-up
 $ cp -i sample-metadata.tsv back-up
-$ ls back-up
+$ ls -R back-up
 ```
 ## 12. Viewing `less`
 
@@ -255,7 +255,7 @@ $ tail back-up/sample-metadata.tsv
 ## 15. Redirect `>` - print to a file
 
 ```
-$ head -n 10 back-up/sample-metadata.tsv > top-of-file.txt
+$ head -n 3 back-up/sample-metadata.tsv > top-of-file.txt
 $ ls
 $ less top-of-file.txt
 ```
