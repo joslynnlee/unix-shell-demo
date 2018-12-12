@@ -13,7 +13,7 @@ $
 ```
 The string of characters before the dollar sign `$` are your username and machine name. The `~` tilde will indicate your working directory. The QIIME Workshop AWS will have two lines with the server directory relative path:
 ```
-<ENTER-DIRECTORY-PATH>
+working directory: /mnt/home/<username>
 $
 ```
 ## 1. Print Working Directory `pwd`
@@ -22,9 +22,9 @@ The first command to learn is `print your current working directory`. Type `pwd`
 ```
 pwd
 ```
-You will get and output line:
+You will get and output line with this account's username as `focused-sloth`
 ```
-<insert pwd>
+/mnt/home/focused-sloth
 ```
 The prompt sign `$` will return, that means the computer is ready for another input. `pwd` is very useful if you are lost in your filesystem.
 
