@@ -151,10 +151,9 @@ $ nano
 ```
 A new screen will pop-up. Type in a few lines.
 ```
-here I am
-this is great
-i am writing nonsense
-QIIME2 will be useful
+future me will thank past me
+for information about my analysis
+leave hints for this workflow
 ```
 Press `CTRL-O` which will [save file, filename to write]. Enter:
 ```
@@ -212,9 +211,9 @@ To download a file from a URL, we use the command `wget`. The syntax is:
 ```
 wget -O [URL]
 ```
-We will download a simple `.fasta` file.
+We will download the `sample-metadata.tsv` file from my test account:
 ```
-$ wget -O "test.tsv" "https://workshop-server.qiime2.org/focused-sloth/sample-metadata.tsv"
+$ wget -O "sample-metadata.tsv" "https://workshop-server.qiime2.org/focused-sloth/sample-metadata.tsv"
 ```
 ## 11. Copy `cp`
 
@@ -224,7 +223,7 @@ cp -i <source-file> <target-file> [-i flag will ask approval]
 cp -i <source-file> <target-directory>
 cp -i <source-file> . [. is current directory] 
 ```
-Let's copy the `sample-metadata.tsv"` file to 
+Let's copy the `test.tsv"` file to 
 ```
 $ mkdir back-up
 $ cp -i sample-metadata.tsv back-up
@@ -240,7 +239,7 @@ Using ENTER, scroll down the file. To EXIT, press `q`.
 ## 13. Print top ten lines `head`
 
 ```
-$head back-up/sample-metadata.tsv 
+$ head back-up/sample-metadata.tsv 
 
 ```
 
@@ -275,7 +274,7 @@ feature-table, diversity) and built-in commands (e.g. info, tools).
 You can discover what plugins you currently have installed, as well as
 other information about your QIIME deployment, by running qiime info:
 ```
-qiime info
+$ qiime info
 ```
 
 ## We hope you feel comfortable with this refresher. All of these commands take practice. Below are more tips for shortcuts and important keys.
