@@ -1,3 +1,5 @@
+Note: This tutorial was for the QIIME2 workshop. We logged into an AWS server, so the _home_ directory was different. The workshop has ended so the working directory will be different on your own computer.
+
 I am writing up a short UNIX shell tutorial to prepare you for QIIME2 analysis. There are roughly 10-12 UNIX commands you will need to practice to run various plugins for QIIME2.
 
 First recommendation, use a Text Editor (like [TextWrangler, BBEdit](https://www.barebones.com/products/textwrangler/))
@@ -63,9 +65,9 @@ $ mkdir --help
 mkdir: illegal option -- -
 usage: mkdir [-pv] [-m mode] directory ...
 ```
-The `...` means a space betweeen a directory name denotes another directory. We had `2018` space `12`, resulting in two directories.
+The `...` means a space betweeen a directory name denotes another directory. We had `2018` space `12`, resulting in two directories. Since we already had a directory named `12` the error states it cannot name another directory `12` according to our input.
 
-Or run the `man` command to a command and a BSD General Commands Manual will pop-up:
+Alternative to `--help` you run the `man` command for a command. This will result in the BSD General Commands Manual to pop-up:
 ```
 $ man mkdir
 ```
@@ -79,7 +81,7 @@ mv <directory-to-rename> <new-directory-name>
 ```
 We will type:
 ```
-$ mv 2018-12-12 
+$ mv 2018 2018-12-12 
 ```
 To check if we renamed 2018, type:
 ```
@@ -163,10 +165,12 @@ Press enter. Then `CTRL-X` to exit editor. Type:
 ```
 $ ls
 ```
-To edit the file again, type:
+To edit the file you just generated in `nano`, type:
 ```
 $ nano example.txt
 ```
+To exit the interactive program, `CTRL-X`.
+
 ## 8. Revisiting `mv`
 
 Where are you? Use:
@@ -211,9 +215,11 @@ To download a file from a URL, we use the command `wget`. The syntax is:
 ```
 wget -O [URL]
 ```
+The option `-O` will write documents to FILE and we give it a specific "filename" from the URL.
+
 We will download the `sample-metadata.tsv` file from my test account:
 ```
-$ wget -O "sample-metadata.tsv" "https://workshop-server.qiime2.org/focused-sloth/sample-metadata.tsv"
+$ wget -O "sample-metadata.tsv" "https://data.qiime2.org/2018.11/tutorials/moving-pictures/sample_metadata.tsv"
 ```
 ## 11. Copy `cp`
 
